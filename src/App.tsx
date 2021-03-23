@@ -1,7 +1,13 @@
 import React from "react";
+import { Header, PhotoFrame } from "./components";
 
-function App() {
-  return <div className="App">App</div>;
-}
+const App = (): JSX.Element => {
+  return (
+    <div className="App">
+      <Header />
+      <PhotoFrame />
+    </div>
+  );
+};
 
 export default App;
