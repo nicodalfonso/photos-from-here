@@ -62,7 +62,7 @@ export const PhotoFrame = (): ReactElement => {
   };
 
   return (
-    <div className="flex justify-center items-center border-gray-500 border h-screen">
+    <div className="flex justify-center items-center border-gray-500 border h-screen bg-indigo-100">
       <div className="bg-gray-700 h-2/5 w-32 rounded-l-lg flex items-center justify-center cursor-pointer" onClick={getPreviousPhoto}>
         <svg
           className="fill-current text-blue-200 h-24 w-24 cursor-pointer"
@@ -73,11 +73,11 @@ export const PhotoFrame = (): ReactElement => {
           <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm8-10a8 8 0 1 0-16 0 8 8 0 0 0 16 0zM7.46 9.3L11 5.75l1.41 1.41L9.6 10l2.82 2.83L11 14.24 6.76 10l.7-.7z" />
         </svg>
       </div>
-      <div className="ring-4 w-1/2 rounded-t-lg flex justify-center items-center h-3/5 bg-gray-800 p-14">
+      <div className="ring-4 w-1/2 rounded-t-lg flex justify-center items-center h-3/5 bg-gray-800 p-14 shadow-inner z-10">
         {loading ? (
           <Spinner />
         ) : photos ? (
-          <img className={`select-none ${orientation}`} src={photos[photoIndex]} alt={photos[photoIndex]} />
+          <img className={`select-none ${orientation} shadow-2xl`} src={photos[photoIndex]} alt={photos[photoIndex]} />
         ) : (
           <p className="text-base text-black">"An Error Has Occurred"</p>
         )}
