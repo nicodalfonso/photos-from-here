@@ -18,3 +18,8 @@ export interface FlickrData {
     photo: PhotoData[];
   };
 }
+
+export interface Orientation {
+  width: string | number;
+  height: string | number;
+}
