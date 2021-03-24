@@ -39,11 +39,21 @@ export const PhotoFrame = (): ReactElement => {
     return data.map((img) => `https://farm${img.farm}.staticflickr.com/${img.server}/${img.id}_${img.secret}.jpg`);
   };
 
-  const getPreviousPhoto = (): void => {
+  const getPreviousPhoto = (e: React.MouseEvent | React.KeyboardEvent): void => {
+    if (e.type === "keyup") {
+      if ((e as React.KeyboardEvent).key !== "Enter" && (e as React.KeyboardEvent).key !== " ") {
+        return;
+      }
+    }
     photoIndex > 0 ? setPhotoIndex(photoIndex - 1) : setPhotoIndex(photos.length - 1);
   };
 
-  const getNextPhoto = (): void => {
+  const getNextPhoto = (e: React.MouseEvent | React.KeyboardEvent): void => {
+    if (e.type === "keyup") {
+      if ((e as React.KeyboardEvent).key !== "Enter" && (e as React.KeyboardEvent).key !== " ") {
+        return;
+      }
+    }
     photoIndex < photos.length - 1 ? setPhotoIndex(photoIndex + 1) : setPhotoIndex(0);
   };
 
@@ -58,6 +68,8 @@ export const PhotoFrame = (): ReactElement => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           onClick={getPreviousPhoto}
+          tabIndex={0}
+          onKeyUp={(e: React.KeyboardEvent<SVGSVGElement>): void => getPreviousPhoto(e)}
         >
           <path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm8-10a8 8 0 1 0-16 0 8 8 0 0 0 16 0zM7.46 9.3L11 5.75l1.41 1.41L9.6 10l2.82 2.83L11 14.24 6.76 10l.7-.7z" />
         </svg>
@@ -78,6 +90,8 @@ export const PhotoFrame = (): ReactElement => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           onClick={getNextPhoto}
+          tabIndex={0}
+          onKeyUp={(e: React.KeyboardEvent<SVGSVGElement>): void => getNextPhoto(e)}
         >
           <path d="M10 0a10 10 0 1 1 0 20 10 10 0 0 1 0-20zM2 10a8 8 0 1 0 16 0 8 8 0 0 0-16 0zm10.54.7L9 14.25l-1.41-1.41L10.4 10 7.6 7.17 9 5.76 13.24 10l-.7.7z" />
         </svg>
