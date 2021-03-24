@@ -9,11 +9,29 @@
   </a>
 </p>
 
-> A reinterpretation of an old project. ```photos-from-here``` is a web app that shows you pictures that were taken near your current location and uploaded publicly to Flickr.
+<img src="./preview.gif" alt="Preview of photos-from-here">
+
+> `photos-from-here` is a web app that shows you pictures that were taken near your current location and uploaded publicly to Flickr.
+>
+> This is a reimplementation of a project that was originally written with vanilla JavaScript, HTML, and CSS.
+>
+> Tech Stack:
+>
+> - React
+> - TypeScript
+> - Tailwind CSS
+>
+> The goals of this project were to demonstrate and understanding of the following:
+>
+> - maintaining state in React components
+> - making API calls with axios
+> - implementing asynchronous functions within React hooks
+> - iterating over state to dynamically generate DOM elements
+> - designing accessible components, with keyboard-focusable inputs
 
 ### ✨ [Demo](https://nicodalfonso.github.io/photos-from-here)
 
-## Install
+## Installation
 
 ```sh
 yarn install
@@ -22,26 +40,31 @@ yarn install
 ## Usage
 
 ```sh
-yarn run start
+yarn start
 ```
 
 ## Author
 
 👤 **Nico D Alfonso**
 
-* Website: https://nicodalfonso.com
-* Twitter: [@nicodalfonso](https://twitter.com/nicodalfonso)
-* Github: [@nicodalfonso](https://github.com/nicodalfonso)
-* LinkedIn: [@nicodalfonso](https://linkedin.com/in/nicodalfonso)
+- Website: https://nicodalfonso.com
+- Twitter: [@nicodalfonso](https://twitter.com/nicodalfonso)
+- Github: [@nicodalfonso](https://github.com/nicodalfonso)
+- LinkedIn: [@nicodalfonso](https://linkedin.com/in/nicodalfonso)
 
-## Show your support
+## Acknowledgements
 
-Give a ⭐️ if this project helped you!
+_This project was initially created as a part of the Software Engineering Certification program from [Kenzie Academy](https://kenzie.academy)_
+
+_To see the original instructions and acceptance criteria for this project, please reference [README.old.md](./readme.old.md)_
+
+_The SVG left and right chevron icons in this project are modified versions of [Zondicons](http://www.zondicons.com/), a wonderful, free-to-use SVG icon library._
 
 ## 📝 License
 
 Copyright © 2021 [Nico D Alfonso](https://github.com/nicodalfonso).<br />
 This project is [MIT](https://mit-license.org/) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
