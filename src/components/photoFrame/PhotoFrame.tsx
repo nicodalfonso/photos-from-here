@@ -1,7 +1,7 @@
 import React, { useState, useEffect, ReactElement } from "react";
 import { fetchPhotos } from "../../utils";
 import { Spinner } from "../spinner";
-import { FlickrData, PhotoData } from "../../shared/types";
+import { PhotoData } from "../../shared/types";
 
 const positionOptions = {
   enableHighAccuracy: true,
@@ -12,6 +12,7 @@ const positionOptions = {
 export const PhotoFrame = (): ReactElement => {
   const [photos, setPhotos] = useState<string[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [photoIndex, setPhotoIndex] = useState<number>(0);
 
   useEffect((): void => {
     const requestGeolocation = (): void => {
@@ -23,7 +24,9 @@ export const PhotoFrame = (): ReactElement => {
   const getPhotos = async (pos: GeolocationPosition): Promise<void> => {
     const { coords }: { coords: GeolocationCoordinates } = pos;
     const data = await fetchPhotos(coords);
-    setPhotos(getImageUrls(data.photos.photo));
+    if (data) {
+      setPhotos(getImageUrls(data.photos.photo));
+    }
     setLoading(false);
   };
 
@@ -38,7 +41,9 @@ export const PhotoFrame = (): ReactElement => {
   return (
     <div className="flex justify-center items-center border-gray-500 border h-screen">
       <div className="ring-4 w-1/2 rounded-t-lg flex justify-center items-center h-3/5">
-        <p className="text-base text-black">{loading ? <Spinner /> : photos ? JSON.stringify(photos) : "An Error Has Occurred"}</p>
+        <p className="text-base text-black">
+          {loading ? <Spinner /> : photos ? <img src={photos[photoIndex]} alt={photos[photoIndex]} /> : "An Error Has Occurred"}
+        </p>
       </div>
     </div>
   );
