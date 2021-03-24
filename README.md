@@ -1,5 +1,5 @@
 <h1 align="center">Welcome to photos-from-here 👋</h1>
-<p>
+<p align="center">
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://mit-license.org/" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
@@ -9,7 +9,9 @@
   </a>
 </p>
 
-<img src="./preview.gif" alt="Preview of photos-from-here">
+<p align="center">
+  <img src="./preview.gif" alt="Preview of photos-from-here">
+</p>
 
 > `photos-from-here` is a web app that shows you pictures that were taken near your current location and uploaded publicly to Flickr.
 >
@@ -29,7 +31,7 @@
 > - iterating over state to dynamically generate DOM elements
 > - designing accessible components, with keyboard-focusable inputs
 
-### ✨ [Demo](https://nicodalfonso.github.io/photos-from-here)
+### <p align="center">✨ [Demo](https://nicodalfonso.github.io/photos-from-here)</p>
 
 ## Installation
 
