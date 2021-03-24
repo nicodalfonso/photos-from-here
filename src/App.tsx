@@ -1,7 +1,7 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import { Header, PhotoFrame } from "./components";
 
-const App = (): JSX.Element => {
+const App = (): ReactElement => {
   return (
     <div className="App">
       <Header />
