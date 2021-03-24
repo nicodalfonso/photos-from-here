@@ -58,7 +58,7 @@ yarn start
 
 _This project was initially created as a part of the Software Engineering Certification program from [Kenzie Academy](https://kenzie.academy)_
 
-_To see the original instructions and acceptance criteria for this project, please reference [README.old.md](./readme.old.md)_
+_To see the original instructions and acceptance criteria for this project, please reference [README.old.md](./README.old.md)_
 
 _The SVG left and right chevron icons in this project are modified versions of [Zondicons](http://www.zondicons.com/), a wonderful, free-to-use SVG icon library._
 
